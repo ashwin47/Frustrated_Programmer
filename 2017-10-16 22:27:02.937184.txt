@@ -1,6 +1,8 @@
 Update fuck
 Fuck again!
 fuck github
+CSS fix to restore tile animation - fuck fuck fuck!
+haha fuck :D
 Fuck to duck
 fix nav fuck ios
 workspace fuck off
@@ -20,10 +22,6 @@ Delete readthisrokas.txt
 fuck you
 I dont giva a fuck!
 CP4: momotor compliance made me fuck up
-Seriously fuck, need some Bitcoin : 3FFyvvoL1hPjAkzyJnpuphhsHeHYLoJ9VT
-Add a fuck file
-
-fucking description.
 booom bitch
 updates bitches...
 updates bitches...
@@ -43,11 +41,14 @@ testing shit!`
 delete shit
 Random shit
 SHIT ===> GOLD
-cleaning up shit
+ GOLD ===> SHIT
+Test the shit
 bunch of animated shit
+cleaning up shit
 animation and other shit
-delete some shit
+iono jenkins shit
 bunch of shit
+delete some shit
 add shit txt
 Remove old shit
 phoenix
@@ -55,10 +56,6 @@ phoenix
 shit ready
 Delete more Shit lol
 Delete Some Shit
-added more shit
-Messing shit with polybar
-Shit is fucked
-minor css shit
 [SASNA-24]
 + Logo en bas des menus de propositions
 + Avec le p'tit logo c'est encore mieux ^^
@@ -76,24 +73,9 @@ Can you hear me now...??(flipCoin)
 3D Scene editor: Trying to fix Door window development hell.
 3D Scene editor: Trying to fix Door window development hell.
 3D Scene editor: Trying to fix Door window development hell.
+Small changes to make the fucking script look crisp as hell
 Make small adjustments to newlines in email header file
 
 Something is broken and I have no idea what, fucking hell
+Heavily condensed the iptables rules.  These should do exactly the same thing, but should have a hell of a lot less overhead!
 Save this time you twat
-Delete suck
-JORDAN SUCKS
-Because dpg-sig sucks donkey balls
-Modified Mortar Synth AI. Still sucks.
-reverting client id string
-
-trademark sucks
-.bashrc - NodeJS and its tooling sucks: https://github.com/creationix/nvm/issues/1277
-Bugfix: accept '0' string as response
-
-Because PHP really, really sucks.
-vscode's api doc sucks, switch back to atom.
-
-There is no perfect tools
-[setup.sh] add double squared brackets on if with logic expression
-
-Oh... why bash sucks so hard?
