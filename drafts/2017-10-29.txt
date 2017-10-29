@@ -1,0 +1,5 @@
+major fixes with databases and shit
+Fuck yes
+Merge pull request #1 from honey079sam/TKT-100
+feat: complaint input level done, FULL CSS BACK ENDER YES FULL STACK BITCHES
+Fuck yes

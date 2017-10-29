@@ -7,8 +7,8 @@ https://api.github.com/search/commits?q={query}{&page,per_page,sort,order}
 TODO
 
 try catch
-duplicate tweet detection 
 new line bug
+returns nill in the morning
 
 '''
 
@@ -16,6 +16,7 @@ import requests
 import datetime
 import json
 import time
+import os
 import tweepy
 import config
 import random
@@ -28,7 +29,7 @@ def getCommits(word_list, now, today):
 		headers={'accept':'application/vnd.github.cloak-preview'}
 		r = requests.get(url, headers=headers)
 		x = json.loads(r.text)
-		print(r.text)
+		#print(r.status_code)
 		i +=1
 
 		if i == 9 or i == 18:
@@ -36,16 +37,13 @@ def getCommits(word_list, now, today):
 			time.sleep(60)
 
 		for num in range(len(x['items'])):
-			print("In")
-			with open("{}.txt".format(now), 'a') as f:
+			with open("commits/{}.txt".format(now), 'a') as f:
 				msg = x['items'][num]['commit']['message']
 				msg.strip()
-				print("msg")
 				if 10<len(msg) and len(msg)<141:
 					if "\n" or "\n\n" in msg:
 						msg.replace("\n","")
 						msg.replace("\n\n","")  ##TODO fix new line bug
-						print(msg)
 					f.writelines(msg+ "\n") # Write all relevent commit msgs to a file
 	return
 
@@ -68,8 +66,11 @@ def tweet(now, today):
 	while (Found == False):
 		draft = random.choice(commit_msg)
 		print(draft)
-		with open("drafts/{}.txt".format(today), 'a') as f:
-			past_tweets_today = f.read().split('\n')
+		past_tweets_today = []
+		with open("drafts/{}.txt".format(today), 'a+') as f:
+			if os.path.getsize("drafts/{}.txt".format(today)) > 0:
+				print("in")
+				past_tweets_today = f.read().split('\n')
 			if not past_tweets_today == draft:
 				f.writelines(draft+ "\n")
 				status = api.update_status(status= draft)
