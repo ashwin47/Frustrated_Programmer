@@ -37,7 +37,7 @@ def getCommits(word_list, now, today):
 			time.sleep(60)
 
 		for num in range(len(x['items'])):
-			with open("commits/{}.txt".format(now), 'a') as f:
+			with open("commits/{}.txt".format(now), 'a+') as f:
 				msg = x['items'][num]['commit']['message']
 				msg.strip()
 				if 10<len(msg) and len(msg)<141:
@@ -73,7 +73,7 @@ def tweet(now, today):
 			if not draft in past_tweets_today:
 				f.writelines(draft+ "\n")
 				status = api.update_status(status= draft)
-				print (status.id) # print id if ts tweeted 
+				print(status.id) # print id if ts tweeted 
 				Found = True
 
 	return
