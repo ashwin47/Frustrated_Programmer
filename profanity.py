@@ -69,9 +69,8 @@ def tweet(now, today):
 		past_tweets_today = []
 		with open("drafts/{}.txt".format(today), 'a+') as f:
 			if os.path.getsize("drafts/{}.txt".format(today)) > 0:
-				print("in")
 				past_tweets_today = f.read().split('\n')
-			if not past_tweets_today == draft:
+			if not draft in past_tweets_today:
 				f.writelines(draft+ "\n")
 				status = api.update_status(status= draft)
 				print (status.id) # print id if ts tweeted 
