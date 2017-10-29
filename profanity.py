@@ -17,6 +17,7 @@ import datetime
 import json
 import time
 import os
+import sys
 import tweepy
 import config
 import random
@@ -44,7 +45,7 @@ def getCommits(word_list, now, today):
 					if "\n" or "\n\n" in msg:
 						msg.replace("\n","")
 						msg.replace("\n\n","")  ##TODO fix new line bug
-					f.writelines(msg+ "\n") # Write all relevent commit msgs to a file
+					f.write(msg+ "\n") # Write all relevent commit msgs to a file
 	return
 
 def tweet(now, today):
@@ -71,7 +72,7 @@ def tweet(now, today):
 			if os.path.getsize("drafts/{}.txt".format(today)) > 0:
 				past_tweets_today = f.read().split('\n')
 			if not draft in past_tweets_today:
-				f.writelines(draft+ "\n")
+				f.write(draft+ "\n")
 				status = api.update_status(status= draft)
 				print(status.id) # print id if ts tweeted 
 				Found = True
@@ -81,6 +82,8 @@ def tweet(now, today):
 
 
 def main():
+	reload(sys)
+	sys.setdefaultencoding('utf-8')
 	now = datetime.datetime.now()
 	today = datetime.date.today()
 	
