@@ -23,6 +23,6 @@ Create an [app in twitter](https://apps.twitter.com/) and copy-paste consumer_ke
 
 - [x] Fix new line bug
 - [x] Filter duplicate messages
-- [ ] Handle when search returns empty in the early hours
+- [ ] Handle when early hours search returns empty
 - [ ] Better error handling
 - [ ] Fix relative path	
